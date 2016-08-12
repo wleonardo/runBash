@@ -1,0 +1,27 @@
+{
+  "name": "run-exec",
+  "version": "1.0.0",
+  "description": "The sample tool for running unix code in nodejs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wleonardo/runExec.git"
+  },
+  "keywords": [
+    "nodejs",
+    "exec"
+  ],
+  "author": "wang861622836@163.com",
+  "license": "ISC",
+  "dependencies": {
+    "q": "^1.4.1",
+    "co": "^4.6.0"
+  },
+  "bugs": {
+    "url": "https://github.com/wleonardo/runExec/issues"
+  },
+  "homepage": "https://github.com/wleonardo/runExec#readme"
+}

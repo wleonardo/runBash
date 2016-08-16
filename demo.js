@@ -1,5 +1,5 @@
 'use strict';
-const runTask = require('./runTask.js');
+const runTask = require('./index.js');
 const co = require('co');
 
 co(function*() {

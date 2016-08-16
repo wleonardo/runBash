@@ -1,10 +1,11 @@
 {
-  "name": "run-exec",
+  "name": "run-bash",
   "version": "1.0.0",
   "description": "The sample tool for running unix code in nodejs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "istanbul cover _mocha -- -R mochawesome -t 500",
+    "test1": "_mocha --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,27 @@
   "bugs": {
     "url": "https://github.com/wleonardo/runExec/issues"
   },
-  "homepage": "https://github.com/wleonardo/runExec#readme"
+  "homepage": "https://github.com/wleonardo/runExec#readme",
+  "devDependencies": {
+    "babel-core": "^6.13.2",
+    "babel-polyfill": "^6.13.0",
+    "babel-preset-es2015": "^6.13.2",
+    "brfs": "^1.4.3",
+    "browserify": "^13.1.0",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.4",
+    "jasmine-core": "^2.4.1",
+    "jasmine-node": "^1.14.5",
+    "karma": "^1.2.0",
+    "karma-browserify": "^5.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2",
+    "karma-mocha": "^1.1.1",
+    "karma-requirejs": "^1.0.0",
+    "mocha": "^3.0.2",
+    "mochawesome": "^1.5.0",
+    "requirejs": "^2.2.0",
+    "watchify": "^3.7.0"
+  }
 }

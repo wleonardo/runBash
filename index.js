@@ -27,18 +27,19 @@ module.exports = function(cmds, option) {
   if (typeof cmds === 'string') {
     cmds = cmds.split();
   }
-  console.log("task start");
+  //下面不使用arguments的原因是在option缺失的时候，不但要对于arguments要赋值还要修改arguments的length
   if (option.isAsync) {
     return (function(cmds, option) {
       var dfd = Q.defer();
       exeCli(cmds, dfd, option);
       return dfd.promise;
-    }).apply(this, arguments);
+    }).apply(this, [cmds,option]);
   } else {
     return (function*(cmds, option) {
       var dfd = Q.defer();
       exeCli(cmds, dfd, option);
       return dfd.promise;
-    }).apply(this, arguments);
+    }).apply(this, [cmds,option]);
+
   }
 };
